@@ -30,6 +30,6 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="Lemmas.cs" />
+    <Compile Include="Lemma.cs" />
   </ItemGroup>
 </Project>
