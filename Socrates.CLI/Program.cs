@@ -14,6 +14,8 @@
 //    limitations under the License.
 using System;
 using Socrates.Game;
+using System.Diagnostics;
+using System.IO;
 
 namespace Socrates.CLI
 {
@@ -21,9 +23,63 @@ namespace Socrates.CLI
 	{
 		public static void Main(string[] args)
 		{
-			Lemma lemma = new Lemma("omnomnomnomnom");
+			int choice = NewGameChoice();
+			int players = NewGamePlayers();
+			if(choice == 1)
+			{
+				//TODO: Implement Local Game
+			}
+			else if (choice == 2)
+			{
+				//TODO: Implement Networked Game
+			}
 
-			Console.WriteLine("Hello World!");
+
+		}
+		private static int NewGameChoice()
+		{
+			int choice = 0;
+			Console.WriteLine("Would you Like to play a:");
+			Console.WriteLine("1). Local Game");
+			Console.WriteLine("2). Networked Game");
+			try
+			{
+				choice = Convert.ToInt32(Console.ReadLine());
+				if (choice < 1 || choice > 2) 
+				{
+					throw new InvalidDataException();
+				}
+			}
+			catch (Exception ex)
+			{
+				Debug.Write(String.Format("Error: Invalid Input, should be 1 or 2 value is {0}",choice));
+				NewGameChoice();
+			}
+			return choice;
+		}
+		private static int NewGamePlayers()
+		{
+			int numberOfPlayers = 0;
+			Console.Write("How Many Players: ");
+			try
+			{
+				numberOfPlayers = Convert.ToInt32(Console.ReadLine());
+				if (numberOfPlayers < 2)
+				{
+					throw new InvalidDataException();
+				}
+			}
+			catch(InvalidDataException ex)
+			{
+				Debug.Write(String.Format("ERROR: Number of players must be 2 or greater, You inserted: {0}",numberOfPlayers));
+				NewGamePlayers();
+			}
+			catch (Exception ex)
+			{
+				Debug.Write("ERROR: Invalid Input, Please insert a whole number greater than or equal to 2");
+				NewGamePlayers();
+			}
+			return numberOfPlayers;
 		}
 	}
 }
