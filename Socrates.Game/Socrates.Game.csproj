@@ -32,4 +32,7 @@
   <ItemGroup>
     <Compile Include="Lemma.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
 </Project>

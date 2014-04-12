@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socrates.Game", "Socrates.G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socrates.Tests", "Socrates.Tests\Socrates.Tests.csproj", "{2B20A635-81FF-48D7-AABA-6783A2C7DF0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socrates.CLI", "Socrates.CLI\Socrates.CLI.csproj", "{BD71821A-2F41-4C9A-B2CB-9215EBD242FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,13 +17,17 @@ Global
 		{2B20A635-81FF-48D7-AABA-6783A2C7DF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B20A635-81FF-48D7-AABA-6783A2C7DF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B20A635-81FF-48D7-AABA-6783A2C7DF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD71821A-2F41-4C9A-B2CB-9215EBD242FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD71821A-2F41-4C9A-B2CB-9215EBD242FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD71821A-2F41-4C9A-B2CB-9215EBD242FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD71821A-2F41-4C9A-B2CB-9215EBD242FA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D46990A8-003D-4327-9DF0-2C0E5ADAB05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D46990A8-003D-4327-9DF0-2C0E5ADAB05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D46990A8-003D-4327-9DF0-2C0E5ADAB05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D46990A8-003D-4327-9DF0-2C0E5ADAB05E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Socrates.Game\Socrates.Game.csproj
+		StartupItem = Socrates.CLI\Socrates.CLI.csproj
 		Policies = $0
 		$0.StandardHeader = $1
 		$1.Text = @\n Copyright ${Year}  ${CopyrightHolder}\n\n   Licensed under the Apache License, Version 2.0 (the "License");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an "AS IS" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.
