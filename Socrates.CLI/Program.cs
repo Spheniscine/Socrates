@@ -52,7 +52,7 @@ namespace Socrates.CLI
 			}
 			catch (Exception ex)
 			{
-				Debug.Write(ex.Data);
+				Debug.Write(ex.ToString());
 				NewGameChoice();
 			}
 			return choice;
@@ -71,7 +71,7 @@ namespace Socrates.CLI
 			}
 			catch(InvalidDataException ex)
 			{
-				Debug.Write(ex.Data);
+				Debug.Write(ex.ToString());
 				NewGamePlayers();
 			}
 			catch (Exception ex)
