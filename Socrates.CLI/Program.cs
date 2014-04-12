@@ -47,12 +47,12 @@ namespace Socrates.CLI
 				choice = Convert.ToInt32(Console.ReadLine());
 				if (choice < 1 || choice > 2) 
 				{
-					throw new InvalidDataException();
+					throw new InvalidDataException(String.Format("Error: Invalid Input, should be 1 or 2 value is {0}",choice));
 				}
 			}
 			catch (Exception ex)
 			{
-				Debug.Write(String.Format("Error: Invalid Input, should be 1 or 2 value is {0}",choice));
+				Debug.Write(ex.Data);
 				NewGameChoice();
 			}
 			return choice;
@@ -66,16 +66,17 @@ namespace Socrates.CLI
 				numberOfPlayers = Convert.ToInt32(Console.ReadLine());
 				if (numberOfPlayers < 2)
 				{
-					throw new InvalidDataException();
+					throw new InvalidDataException(String.Format("ERROR: Number of players must be 2 or greater, You inserted: {0}",numberOfPlayers));
 				}
 			}
 			catch(InvalidDataException ex)
 			{
-				Debug.Write(String.Format("ERROR: Number of players must be 2 or greater, You inserted: {0}",numberOfPlayers));
+				Debug.Write(ex.Data);
 				NewGamePlayers();
 			}
 			catch (Exception ex)
 			{
+				Debug.Write(ex.ToString());
 				Debug.Write("ERROR: Invalid Input, Please insert a whole number greater than or equal to 2");
 				NewGamePlayers();
 			}
