@@ -64,7 +64,10 @@ namespace Socrates.Game
 		}
 		public bool IdealForm
 		{
-			get;
+			get
+			{
+				return idealForm;
+			}
 			set
 			{
 				//Should only be able to set correct to true, it can't become false
