@@ -36,6 +36,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
+    <Compile Include="LemmaTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Socrates.Game\Socrates.Game.csproj">
+      <Project>{D46990A8-003D-4327-9DF0-2C0E5ADAB05E}</Project>
+      <Name>Socrates.Game</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
