@@ -1,4 +1,4 @@
 Socrates
 ========
 
-Socrates game (based on Zendo, but with text
+Socrates game (based on Zendo, but with text)
