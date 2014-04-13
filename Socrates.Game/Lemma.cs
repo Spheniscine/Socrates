@@ -24,6 +24,9 @@ namespace Socrates.Game
 	/// </summary>
 	public class Lemma
     {
+		#region constants
+		private const Int16 maxLength = 40;
+		#endregion
 		#region Constructors
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Socrates.Game.Lemma"/> class.
@@ -42,7 +45,8 @@ namespace Socrates.Game
 		public Lemma(String content)
 		{
 			Content = content.ToLower();
-			Debug.WriteIf(Content.Length > 40, "Lemma Longer than 40 Characters");
+			Debug.WriteIf(Content.Length > maxLength, "Lemma Longer than 40 Characters");
+			//TODO: Strip string of non A-Z characters
 
 		}
 		#endregion
@@ -64,27 +68,12 @@ namespace Socrates.Game
 		}
 		public bool IdealForm
 		{
-			get
-			{
-				return idealForm;
-			}
-			set
-			{
-				//Should only be able to set correct to true, it can't become false
-				//TODO: make it so only the master can set a Lemma to correct
-				if(idealForm)//== true
-				{
-					return;
-				}
-				if (value)//== true
-				{
-					idealForm = true;
-				}
-			}
+			get;
+			set;
 		}
 		#endregion
 		#region Private Variables
-		private bool idealForm = false;
+
 		#endregion
     }
 }
