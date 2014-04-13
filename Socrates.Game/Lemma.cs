@@ -14,6 +14,7 @@
 //    limitations under the License.
 using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Socrates.Game
 {
@@ -44,7 +45,12 @@ namespace Socrates.Game
 		/// </param>
 		public Lemma(String content)
 		{
-			Content = content.ToLower();
+			Content = content.ToUpper().Trim();
+			Regex r = new Regex("\\s+");
+			Content = r.Replace(Content, " ");
+			r = new Regex("[^A-Z ]");
+			Content = r.Replace(Content, "");
+
 			Debug.WriteIf(Content.Length > maxLength, "Lemma Longer than 40 Characters");
 			//TODO: Strip string of non A-Z characters
 
