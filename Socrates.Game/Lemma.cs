@@ -25,7 +25,7 @@ namespace Socrates.Game
 	public class Lemma
     {
 		#region constants
-		private const Int16 maxLength = 40;
+		private const Byte maxLength = 40;
 		#endregion
 		#region Constructors
 		/// <summary>
