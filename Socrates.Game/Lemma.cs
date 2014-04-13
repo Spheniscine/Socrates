@@ -43,13 +43,9 @@ namespace Socrates.Game
 		/// Do not make more than 40 characters long. While we do not check, 
 		/// if you are following this guideline, it makes it difficult for players to discern rules.
 		/// </param>
-		public Lemma(String content)
+		public Lemma(string content)
 		{
-			Content = content.ToUpper().Trim();
-			Regex r = new Regex("\\s+");
-			Content = r.Replace(Content, " ");
-			r = new Regex("[^A-Z ]");
-			Content = r.Replace(Content, "");
+			Content = Normalize(content);
 
 			Debug.WriteIf(Content.Length > maxLength, "Lemma Longer than 40 Characters");
 			//TODO: Strip string of non A-Z characters
@@ -57,6 +53,18 @@ namespace Socrates.Game
 		}
 		#endregion
 		#region Methods
+		public static string Normalize(string str)
+		{
+
+			string res = str.ToUpper().Trim();
+			Regex r = new Regex("\\s+");
+			res = r.Replace(res, " ");
+			r = new Regex("[^A-Z ]");
+			res = r.Replace(res, "");
+
+			return res;
+		}
+
 		public override string ToString()
 		{
 			return string.Format("{0}", Content);
