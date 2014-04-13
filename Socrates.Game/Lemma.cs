@@ -80,11 +80,6 @@ namespace Socrates.Game
 			get;
 			private set; //Contents of a Lemma should be read only
 		}
-		public bool IdealForm
-		{
-			get;
-			set;
-		}
 		#endregion
 		#region Private Variables
 

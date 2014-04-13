@@ -31,6 +31,11 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Lemma.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Master.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="IDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
